@@ -36,6 +36,9 @@ gem "jbuilder"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.17"
 
+gem 'will_paginate'
+gem 'will_paginate-bootstrap5'
+
 #bootstrap 5
 gem 'bootstrap', '~> 5.1.3'
 
