@@ -1,0 +1,217 @@
+--- !ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache
+columns:
+  schema_migrations:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: version
+    sql_type_metadata: &1 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  ar_internal_metadata:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: key
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: value
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &4 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    sql_type_metadata: &2 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime(6)
+      type: :datetime
+      limit: 
+      precision: 6
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &5 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    sql_type_metadata: *2
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  articles:
+  - &3 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: id
+    sql_type_metadata: &6 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: title
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: description
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: text
+      type: :text
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: user_id
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: int
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  users:
+  - *3
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: username
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: email
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *4
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: password_digest
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: admin
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: boolean
+      type: :boolean
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  categories:
+  - *3
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: name
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *4
+  - *5
+  article_categories:
+  - *3
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: article_id
+    sql_type_metadata: *6
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: category_id
+    sql_type_metadata: *6
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+primary_keys:
+  schema_migrations: version
+  ar_internal_metadata: key
+  articles: id
+  users: id
+  categories: id
+  article_categories: id
+data_sources:
+  schema_migrations: true
+  ar_internal_metadata: true
+  articles: true
+  users: true
+  categories: true
+  article_categories: true
+indexes:
+  schema_migrations: []
+  ar_internal_metadata: []
+  articles: []
+  users: []
+  categories: []
+  article_categories: []
+version: 20220509124827
+database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
+  version:
+  - 3
+  - 31
+  - 1
+  full_version_string: 
