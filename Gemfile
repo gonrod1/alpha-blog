@@ -59,9 +59,10 @@ gem "bootsnap", require: false
 group :development, :test do
 
   gem "sqlite3", "~> 1.4"
+
+  gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+  gem 'will_paginate-bootstrap5', '~> 0.2.4'
   
-  gem 'will_paginate','~> 3.3.1'
-  gem 'will_paginate-bootstrap5','~> 0.2.4'
   gem 'rexml', require: false
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
